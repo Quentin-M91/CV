@@ -47,7 +47,7 @@ header .container a {
 /* -------------------------------------------------------- Main -------------------------------------------------------- */
 main .container {
     display: flex;
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
     background-color: antiquewhite;
 
 }
@@ -57,7 +57,7 @@ main .container {
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
-    max-width: 60%;
+    width: 60%;
     /*border: solid 1px;*/
 }
 
@@ -101,7 +101,6 @@ main .container {
     padding: 20px 20px;
     max-width: 850px;
     width: 30%;
-
     /*border: solid 1px;*/
 } 
 
@@ -113,10 +112,11 @@ main .container {
 
 .list-formation {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     /* flex wrap permet le retour à la ligne */
     flex-wrap: wrap;
     gap: 20px;
+    padding-bottom: 20px;
 }
 
 .formation {
@@ -144,6 +144,7 @@ main .container {
     /* flex wrap permet le retour à la ligne */
     flex-wrap: wrap;
     gap: 20px;
+    padding-bottom: 20px;
 }
 
 .competences {
@@ -182,7 +183,7 @@ main .container {
 
 .list-lien {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     /* flex wrap permet le retour à la ligne */
     flex-wrap: wrap;
     gap: 20px;
@@ -241,32 +242,36 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-/* Pour les tablettes (largeur max de 768px) */
-@media (max-width: 768px) {
+/* Pour les tablettes (largeur max de 817px) */
+@media (max-width: 817px) {
 
     /* En-tête */
     header .container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
+    .container {
+        justify-content: center;
     }
 
-    .hero h2 {
-        font-size: 2rem;
+    aside {
+        display: inline-block;
     }
 
-    .hero p {
-        font-size: 1rem;
-    }
-
-    /* Produits */
     .experiences {
-        width: 45%;
+        width: 60%;
         /* Deux produits côte à côte */
+    }
+
+    .formation-education {
+        width: 90%;
+        /* Un prduit par ligne */
+        margin: 0 auto;
+    }
+
+    .logo {
+        display: none;
     }
 }
 
@@ -277,29 +282,14 @@ footer ul li a:hover {
         text-align: center;
     }
 
-    header nav ul {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-
-    /* Section Hero */
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .cta-button {
-        width: 100%;
-        display: block;
-        margin-top: 20px;
-    }
-
     /* Produits */
     .experiences {
+        width: 90%;
+        /* Un prduit par ligne */
+        margin: 0 auto;
+    }
+
+    .formation-education {
         width: 90%;
         /* Un prduit par ligne */
         margin: 0 auto;
