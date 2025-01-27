@@ -244,7 +244,7 @@ footer ul li a:hover {
 }
 
 /* Pour les tablettes (largeur max de 817px) */
-@media (max-width: 817px) {
+@media (max-width: 850px) {
 
     /* En-tête */
     header .container {
